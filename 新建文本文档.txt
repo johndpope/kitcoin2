@@ -1,0 +1,95 @@
+/bin/systemctl start vsftpd.service
+
+http://QuickConnect.to/helei0915
+
+备份mysql
+mysqldump -uroot -pSSDq9INqfFjL1hBsyVI  ketecoin > ketecoin08152153.sql
+
+中奖比例
+4、/mnt/www/ketecoin/frontend/controllers/UserController.php的214行的9改为90
+
+手动拆分
+UPDATE`ketecoins` SET `totle`=`totle`*2 where `user_id`='299664'
+
+
+拆分次数的限制
+/mnt/www/kecoin/backend/controllers/Fissioncontroller.php 的81行
+
+
+超时时间设置
+\frontend\behaviors\GlobalAccessBehavior.php   77行，单位是秒
+
+
+查找自己网络下的会员列表
+SELECT * FROM `user` WHERE `relationship_map` LIKE (SELECT CONCAT('%',`relationship_map`,'%') FROM `user` WHERE `id` =220683);
+或者
+SELECT * FROM `user` WHERE `relationship_map` LIKE (SELECT CONCAT('%',`relationship_map`,'%') FROM `user` WHERE `username` ='ok005');
+
+
+bonus：奖金币
+查寻奖金币总额：(数据量大，超时)
+select sum(balance) from bonus
+where id in
+(select max(id) from bonus group by user_id)
+
+语言包目录
+\www\ketecoin\frontend\messages\en-US
+语言配置文件
+\www\ketecoin\frontend\controllers\SiteController.php  89行
+
+会员登录首页
+\www\ketecoin\frontend\views\layouts\mian.php
+
+会员国旗首页
+\www\ketecoin\frontend\views\site\signin.php
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~兆机子-虎哥  9:22:07
+短信没登上你的QQ
+/mnt/www/ketecoin/common/models/Active.php
+384行的121212改为你的云片的APIKEY
+兆机子-虎哥  9:24:08
+修改短信内容和签名在
+backend
+controllers
+MarketRegisterCoinsController.php
+92行 
+128行
+
+frontend
+controllers
+RegisterController.php
+153行  
+233行  
+TestController.php
+24行  
+UserController.php
+191行
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+commission：委托记录
+fast_recharge:余额充值
+deposits：在线充值表单
+fund_sources表：绑写的提现地址
+fast_recharge: 快速充值余额
+order_recharge:释放充币
+drawbtc:币提现
+drawcny:余额提现
+transactions 交易记录
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+DELETE FROM `commission` WHERE `number` = `volume` OR `status` = -1
+
+
+删除已经成交的和已经取消的的挂单
+
+
+我:
+我想让会员重新生成
+:
+virtualaddress，清空这个表
